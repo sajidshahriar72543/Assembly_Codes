@@ -29,7 +29,7 @@ main proc
     
     mov ah, 1
     int 21h
-    mov dl, al
+    mov bh, al
     
     mov ah, 2
     mov dl,10
@@ -41,7 +41,7 @@ main proc
     lea dx, msg2
     int 21h
     
-    add bl, dl
+    add bl, bh
     sub bl, 48
     
     mov ah, 2
@@ -53,6 +53,3 @@ main proc
     int 21h
     main endp
 end main
-    
-    
-    
